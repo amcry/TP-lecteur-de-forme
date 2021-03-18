@@ -14,3 +14,11 @@ Projet support SLAM5.
 8. Compléter l'implémentation des deux méthodes `ajouterAuDessin` et `supprimerDuDessin` de la classe `EditeurDeFormes`.
 9. Ajoutez tous les getters et setters nécessaires à la compilation et au bon fonctionnement de l'application.
 
+
+
+
+## Travail éffectué
+
+1. Toutes les methodes du "travail à faire" sont completées 
+2. Le code compile entièrement 
+3. Problème : les formes ne s'affichent pas 

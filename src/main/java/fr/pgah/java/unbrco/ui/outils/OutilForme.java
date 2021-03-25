@@ -20,7 +20,7 @@ public class OutilForme extends Outil {
 
   @Override
   protected void creerBouton(JComponent parent) {
-    bouton = new JButton("Forme");
+    bouton = new JButton("Forme rectangle");
     bouton = customiserButton(bouton);
   }
 

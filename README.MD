@@ -21,4 +21,4 @@ Projet support SLAM5.
 
 1. Toutes les methodes du "travail à faire" sont completées 
 2. Le code compile entièrement 
-3. Problème : les formes ne s'affichent pas 
+3. + creation d'une classe forme ovale

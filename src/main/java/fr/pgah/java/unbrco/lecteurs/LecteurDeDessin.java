@@ -3,6 +3,8 @@ package fr.pgah.java.unbrco.lecteurs;
 import fr.pgah.java.unbrco.model.Dessin;
 import fr.pgah.java.unbrco.model.Forme;
 import fr.pgah.java.unbrco.ui.EditeurDeFormes;
+
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.Timer;
 import java.awt.event.ActionEvent;
@@ -17,10 +19,13 @@ public class LecteurDeDessin implements ActionListener {
   private List<Forme> dansLaColonneCourante;
 
   public LecteurDeDessin(Dessin dessin, Timer timer) {
-
+    // À COMPLÉTER
+    // Initialiser toutes les variables d'instance
     this.dessin = dessin;
     this.timer = timer;
-
+    colonneEnCours = 0;
+    dansLaColonneCourante = new ArrayList<>();
+    dansLaColonnePrecedente = new ArrayList<>();
   }
 
   @Override
@@ -48,21 +53,22 @@ public class LecteurDeDessin implements ActionListener {
   }
 
   private void selectionnerEtJouerLesFormes() {
-    dansLaColonneCourante = dessin.formesSurLaColonne(colonneEnCours);
 
     // À COMPLÉTER
 
     // Déselectionner et stopper toutes les formes qui étaient dans
     // la colonne précédente et qui ne sont plus dans la colonne courante
 
-    for (Forme precedent : dansLaColonnePrecedente) {
-      if (!dansLaColonneCourante.contains(precedent)) {
-        precedent.deselectionnerEtStopper();
-      }
-    }
-
     // Sélectionner et jouer toutes les formes qui sont dans
     // la colonne courante et qui n'étaient pas dans la colonne précédente
+
+    if (dansLaColonnePrecedente != null) {
+      for (Forme precedent : dansLaColonnePrecedente) {
+        if (!dansLaColonneCourante.contains(precedent)) {
+          precedent.deselectionnerEtStopper();
+        }
+      }
+    }
 
     for (Forme courant : dansLaColonneCourante) {
       if (!dansLaColonnePrecedente.contains(courant)) {

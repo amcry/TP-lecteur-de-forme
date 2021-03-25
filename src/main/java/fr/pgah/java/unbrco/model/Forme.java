@@ -36,7 +36,7 @@ public class Forme {
     // À COMPLÉTER
     // renvoyer vrai si le x donné est dans l'espace horizontal de la forme
     // renvoyer faux sinon
-    if (x > 0 && x < this.x + longueur) {
+    if (x > this.x && x < this.x + longueur) {
       return true;
     }
     return false;
@@ -47,7 +47,7 @@ public class Forme {
     // À COMPLÉTER
     // renvoyer vrai si le y donné est dans l'espace vertical de la forme
     // renvoyer faux sinon
-    if (y > 0 && y < this.y + hauteur) {
+    if (y > this.y && y < this.y + hauteur) {
       return true;
     }
     return false;

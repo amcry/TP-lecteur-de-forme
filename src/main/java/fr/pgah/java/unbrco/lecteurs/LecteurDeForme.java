@@ -18,6 +18,10 @@ public class LecteurDeForme implements ActionListener {
     // À COMPLÉTER
     // Initialiser toutes les variables d'instance
 
+    this.dessin = dessin;
+    this.forme = forme;
+    this.t = t;
+
   }
 
   @Override

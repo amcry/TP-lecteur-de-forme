@@ -38,10 +38,11 @@ public class OutilDeplacer extends Outil {
     // Sélectionner et jouer la forme qui se trouve au point cliqué.
     // Doit également gérer l'initiation d'un "drag" éventuel.
     // Ne fait rien si pas de forme à cet endroit.
+
     formeADeplacer = editeur.getFormeEn(e.getPoint());
     if (formeADeplacer != null) {
-      dragDansZoneDessin(e);
       formeADeplacer.selectionnerEtJouer();
+      debut = e.getPoint();
     }
   }
 
